@@ -20,6 +20,6 @@ func (r *ReservationBuilder) Type(rsvnType RsvnType) {
 	r.RsvnType = rsvnType
 }
 
-func (r *ReservationBuilder) make() *ReservationBuilder {
+func (r *ReservationBuilder) Make() *ReservationBuilder {
 	return r
 }
