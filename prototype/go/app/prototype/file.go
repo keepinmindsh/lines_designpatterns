@@ -5,14 +5,15 @@ import (
 	"prototype/domain"
 )
 
-type File struct {
-	name string
+type FileProto struct {
+	Name string
 }
 
-func (f *File) print(indentation string) {
-	fmt.Println(indentation + f.name)
+func (f *FileProto) print(indentation string) {
+	fmt.Println(indentation + f.Name)
 }
 
-func (f *File) clone() domain.Inode {
-	return &File{name: f.name + "_clone"}
+// todo 해당 코드는 정상적으로 동작하지 않음
+func (f *FileProto) clone() domain.Inode {
+	return &FileProto{Name: f.Name}
 }
