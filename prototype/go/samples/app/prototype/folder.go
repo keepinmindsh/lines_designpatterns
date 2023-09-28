@@ -2,7 +2,7 @@ package prototype
 
 import (
 	"fmt"
-	"prototype/domain"
+	"prototype/samples/domain"
 )
 
 type Folder struct {
