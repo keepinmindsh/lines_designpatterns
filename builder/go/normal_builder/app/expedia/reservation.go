@@ -9,7 +9,7 @@ func NewExpediaReservation() domain.Reservation {
 	return &Expedia{}
 }
 
-func (e Expedia) MakeReservation(reservation domain.ReservationBuilder) {
+func (e Expedia) MakeReservation(reservation *domain.ReservationBuilder) {
 	//TODO implement me
 	panic("implement me")
 }

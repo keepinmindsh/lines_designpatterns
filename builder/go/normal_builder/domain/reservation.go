@@ -2,7 +2,7 @@ package domain
 
 type (
 	Reservation interface {
-		MakeReservation(reservation ReservationBuilder)
+		MakeReservation(reservation *ReservationBuilder)
 	}
 )
 

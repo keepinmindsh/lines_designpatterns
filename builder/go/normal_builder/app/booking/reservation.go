@@ -9,7 +9,7 @@ func NewBookingReservation() domain.Reservation {
 	return &Booking{}
 }
 
-func (b Booking) MakeReservation(reservation domain.ReservationBuilder) {
+func (b Booking) MakeReservation(reservation *domain.ReservationBuilder) {
 	//TODO implement me
 	panic("implement me")
 }
