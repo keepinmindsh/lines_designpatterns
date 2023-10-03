@@ -20,17 +20,8 @@ class Builder(ABC):
 
 
 class ConcreteBuilder1(Builder):
-    """
-    The Concrete Builder classes follow the Builder interface and provide
-    specific implementations of the building steps. Your program may have
-    several variations of Builders, implemented differently.
-    """
 
     def __init__(self) -> None:
-        """
-        A fresh builder instance should contain a blank product object, which is
-        used in further assembly.
-        """
         self.reset()
 
     def reset(self) -> None:
@@ -49,7 +40,7 @@ class ConcreteBuilder1(Builder):
         self._product.add("PartB1")
 
 
-class Product1():
+class Product1:
     def __init__(self) -> None:
         self.parts = []
 
@@ -87,15 +78,17 @@ if __name__ == "__main__":
     builder = ConcreteBuilder1()
     director.builder = builder
 
+    print(type(director))
+
     print("Standard basic product: ")
     director.build_minimal_viable_product()
-    builder.product.list_parts()
+    builder.dropship.list_parts()
 
     print("\n")
 
     print("Standard full featured product: ")
     director.build_full_featured_product()
-    builder.product.list_parts()
+    builder.dropship.list_parts()
 
     print("\n")
 
@@ -103,4 +96,4 @@ if __name__ == "__main__":
     print("Custom product: ")
     builder.get_on_the_ship()
     builder.get_off_the_ship()
-    builder.product.list_parts()
+    builder.dropship.list_parts()
