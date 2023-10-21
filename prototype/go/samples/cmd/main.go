@@ -2,21 +2,21 @@ package main
 
 import (
 	"fmt"
-	prototype2 "prototype/samples/app/prototype"
-	"prototype/samples/domain"
+	"prototype/app/prototype"
+	"prototype/domain"
 )
 
 func main() {
-	file1 := &prototype2.FileProto{Name: "File1"}
-	file2 := &prototype2.FileProto{Name: "File2"}
-	file3 := &prototype2.FileProto{Name: "File3"}
+	file1 := &prototype.FileProto{Name: "File1"}
+	file2 := &prototype.FileProto{Name: "File2"}
+	file3 := &prototype.FileProto{Name: "File3"}
 
-	folder1 := &prototype2.Folder{
+	folder1 := &prototype.Folder{
 		Children: []domain.Inode{file1},
 		Name:     "Folder1",
 	}
 
-	folder2 := &prototype2.Folder{
+	folder2 := &prototype.Folder{
 		Children: []domain.Inode{folder1, file2, file3},
 		Name:     "Folder2",
 	}
