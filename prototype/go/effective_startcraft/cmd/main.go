@@ -2,12 +2,14 @@ package main
 
 import (
 	"effective_startcraft/app/action"
-	"effective_startcraft/app/unit"
+	"effective_startcraft/app/building"
 	"sync"
 )
 
 func main() {
-	newAction := action.NewAction()
+	nexus := building.NewNexus()
+
+	action := action.NewAction()
 
 	var wg sync.WaitGroup
 
@@ -15,7 +17,7 @@ func main() {
 		wg.Add(1)
 
 		go func() {
-			clonedUnit := unit.NewCloneUnit(newAction)
+			clonedUnit := nexus.CreateUnit(action)
 
 			clonedUnit.Building()
 
@@ -30,6 +32,6 @@ func main() {
 			wg.Done()
 		}()
 	}
-	
+
 	wg.Wait()
 }

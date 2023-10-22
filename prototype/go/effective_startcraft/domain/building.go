@@ -1,5 +1,5 @@
 package domain
 
 type Building interface {
-	CreateUnit() Unit
+	CreateUnit(action UnitAction) Unit
 }

@@ -7,8 +7,8 @@ import (
 
 type Nexus struct{}
 
-func (n Nexus) CreateUnit() domain.Unit {
-	return unit.NewCloneUnit()
+func (n Nexus) CreateUnit(action domain.UnitAction) domain.Unit {
+	return unit.NewCloneUnit(action)
 }
 
 func NewNexus() domain.Building {
