@@ -45,7 +45,6 @@ func NewGetPrinterNotSingleton_Way1() *domain.Printer {
 	} else {
 		return SingletonPrinter
 	}
-
 }
 
 func NewGetPrinterNotSingleton() *domain.Printer {
