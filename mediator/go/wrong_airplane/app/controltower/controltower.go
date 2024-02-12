@@ -1,8 +1,8 @@
 package controltower
 
 import (
-	"airplane/domain"
 	"sync"
+	"wrong_airplane/domain"
 )
 
 type controlTower struct {
