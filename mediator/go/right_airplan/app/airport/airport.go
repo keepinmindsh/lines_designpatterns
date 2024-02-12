@@ -1,1 +1,5 @@
 package airport
+
+func Do() {
+
+}
