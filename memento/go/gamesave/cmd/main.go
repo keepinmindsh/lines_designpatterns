@@ -12,7 +12,6 @@ const Latest int = 0
 func main() {
 	gamePlay :=  play.NewGamePlay(save.NewSave())
 
-
 	gamePlay.Play(domain.GameSave{
 		Position : domain.CharacterPosition{
 			X : 10, 
