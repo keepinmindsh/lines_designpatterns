@@ -4,10 +4,29 @@ import (
 	"fmt"
 	"right_airplan/app/plane"
 	"right_airplan/app/strip"
+<<<<<<< HEAD
 	"right_airplan/domain"
 	"sync"
 	"testing"
 	"time"
+=======
+	"sync"
+	"testing"
+	"time"
+	"right_airplan/domain"
+)
+
+package airport
+
+import (
+"fmt"
+"right_airplan/app/plane"
+"right_airplan/app/strip"
+"right_airplan/domain"
+"sync"
+"testing"
+"time"
+>>>>>>> 2eef498 (added for meidater and memento)
 )
 
 var lock = &sync.Mutex{}
@@ -60,7 +79,11 @@ func TestDo(t *testing.T) {
 				waitingAirplane += "[" + airplane.GetName() + "]"
 			}
 		}
+<<<<<<< HEAD
 		fmt.Println(waitingAirplane + " 착륙 대기중")
+=======
+		fmt.Println(waitingAirplane + "착륙 대기중")
+>>>>>>> 2eef498 (added for meidater and memento)
 
 		var isFinished bool
 		for _, airplane := range airplanes {

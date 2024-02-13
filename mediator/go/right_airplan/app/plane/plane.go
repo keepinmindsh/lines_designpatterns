@@ -34,7 +34,11 @@ func (p *Plane) Landing() {
 		time.Sleep(time.Second * 1)
 		appendString += strconv.Itoa(i) + " 미터 상공 > "
 	}
+<<<<<<< HEAD
 	fmt.Println(p.Name + " : " + appendString + "착륙 완료")
+=======
+	fmt.Println(p.Name + " : " + appendString + " 착륙 완료")
+>>>>>>> 2eef498 (added for meidater and memento)
 }
 
 func (p *Plane) Stop() {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package domain 
 
 
@@ -24,3 +25,11 @@ type Save interface {
 	Save(data GameSave) 
 	Load(savePoint int) GameSave
 }
+=======
+package domain
+
+type Save interface {
+	Save()
+	Load()
+}
+>>>>>>> 2eef498 (added for meidater and memento)
