@@ -13,10 +13,10 @@ func (s *Save) Save(data domain.GameSave) {
 }
 
 func (s *Save) Load(savePoint int) domain.GameSave {
-	if s.SaveData[savePoint] != nil {
+	if s.SaveData[savePoint] != (domain.GameSave{}) {
 		return s.SaveData[savePoint]
 	} else {
-		return nil
+		return domain.GameSave{}
 	}
 }
 
